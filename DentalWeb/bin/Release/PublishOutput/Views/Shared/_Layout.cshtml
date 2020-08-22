@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="~/Content/img/tooth_dental_logo_design-550x550.png" />
+    <link href="~/engine1/style.css" rel="stylesheet" />
+    <script src="~/engine1/jquery.js"></script>
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    @Html.Partial("_NavBar")
+    <div class="container body-content">
+        <div style="margin:auto; padding-top:20px;">
+            <p style="text-align:right; font-family:'Book Antiqua';"><b>Follow us in social media</b></p>
+            <a href="https://www.facebook.com" class="btn btn-info btn-sm pull-right">Facebook &raquo;</a>
+            <h1>Model Dental Clinic</h1>
+            <div id="wowslider-container1">
+                <div class="ws_images">
+                    <ul>
+                        <li><img src="~/data1/images/bannercosmeticdentistry.jpg" alt="" title="" id="wows1_0" /></li>
+                        <li><img src="~/data1/images/banner_img1.jpg" alt="" title="" id="wows1_1" /></li>
+                        <li><img src="~/data1/images/banner_stock_preventive.jpg" alt="" title="" id="wows1_2" /></li>
+                        <li><a href="http://wowslider.net"><img src="~/data1/images/missingatoothbesttoothreplacementnearpleasantonca.jpg" alt="bootstrap slider" title="" id="wows1_3" /></a></li>
+                        <li><img src="~/data1/images/services_banner.jpg" alt="" title="" id="wows1_4" /></li>
+                    </ul>
+                </div>
+                <div class="ws_bullets">
+                    <div>
+                        <a href="#" title=""><span><img src="~/data1/tooltips/bannercosmeticdentistry.jpg" alt="" />1</span></a>
+                        <a href="#" title=""><span><img src="~/data1/tooltips/banner_img1.jpg" alt="" />2</span></a>
+                        <a href="#" title=""><span><img src="~/data1/tooltips/banner_stock_preventive.jpg" alt="" />3</span></a>
+                        <a href="#" title=""><span><img src="~/data1/tooltips/missingatoothbesttoothreplacementnearpleasantonca.jpg" alt="" />4</span></a>
+                        <a href="#" title=""><span><img src="~/data1/tooltips/services_banner.jpg" alt="" />5</span></a>
+                    </div>
+                </div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap image slider</a> by WOWSlider.com v8.8</div>
+                <div class="ws_shadow"></div>
+            </div>
+            <p class="lead"><b style="font-family:'Book Antiqua'">Some tortures are physical And some are mental, But the one that is both Is dental. </b></p>
+            <script src="~/engine1/wowslider.js"></script>
+            <script src="~/engine1/script.js"></script>
+        </div>
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Dental Clinic</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

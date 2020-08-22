@@ -1,0 +1,31 @@
+﻿@model DentalWeb.ViewModels.RandomDentalViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var className = Model.Patients.Count > 0 ? "popular" : null;
+
+}
+
+<h2 class="@className">@Model.Dental.Name</h2>
+
+@if (Model.Patients.Count == 0)
+{
+    <p>No one has taken appointment yet..!!</p>
+}
+else
+{
+    <ul>
+        @foreach (var patient in Model.Patients)
+    {
+        <li>
+            @*<a href="./Details/@patient.Id">@patient.Name</a>*@
+            @Html.ActionLink(patient.Name, "Details", "Dental", new { id = patient.Id }, null)
+        </li>
+}
+    </ul>
+}
+
+
+

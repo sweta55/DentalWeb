@@ -1,0 +1,12 @@
+﻿@model IEnumerable<DentalWeb.Models.Patient>
+
+@{
+    ViewBag.title = "Details";
+}
+
+<h2>Patient Details</h2>
+
+@foreach (var patient in Model)
+{
+    <p>@patient.Name</p>
+}

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 container-fluid">
+            <h2>@ViewBag.Title.</h2>
+            <h3>@ViewBag.Message</h3>
+            <address>
+                Mahaboudha, Kathmandu <br />
+                <abbr title="Phone">Phone:</abbr>
+                +977 9803661442
+            </address>
+
+            <address>
+                <strong>Support:</strong>   <a href="mailto:modeldentalclinic@example.com">modeldentalclinic@gmail.com</a><br />
+            </address>
+        </div>
+
+        <div class="col-md-6 container-fluid col-lg-offset-2">
+                    <h2>Take an appointment</h2>
+                    <p><a class="btn btn-primary" href="@Url.Action("Create","Appointments")">Get appointment &raquo;</a></p>
+        </div>
+</div>
